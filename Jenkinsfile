@@ -1,6 +1,6 @@
 #!groovy​
 pipeline {
-    agent test_node
+    agent { node { label 'dev' } } 
         stages {
             stage ('Ansible Code checkout ') {
                 steps {
